@@ -1,3 +1,14 @@
+Em desenvolvimento...
+ToDo:
+- implementar funcionalidade de pesquisa
+- desenvolver estilos utilizando sass
+- implementar redux para gerenciar os estados de forma global
+- melhorar chamadas (talvez react query? evitar chamadas desnecessárias.. cache)
+[Bônus]
+- melhoria: refatorar componentes para uma melhor utilização de Server Components
+
+---
+
 # Movie Library App
 
 This app was created to search for movies and series.
