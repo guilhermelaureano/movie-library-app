@@ -3,10 +3,13 @@ import Image from 'next/image';
 import { Suspense } from 'react';
 
 interface MovieDetailsProps {
-  id: string;
+  params: {
+    id: string;
+  };
 }
 
-export default async function MovieDetails({ id }: MovieDetailsProps) {
+export default async function MovieDetails({ params }: MovieDetailsProps) {
+  const { id } = params;
   const response = await fetch(`http:localhost:3002/movie/?id=${id}`, {
     next: { revalidate: 10 },
   });
