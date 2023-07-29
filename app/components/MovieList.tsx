@@ -31,8 +31,11 @@ export function MovieList({ list }: MovieListProps) {
       {list.map(movie => {
         return (
           <StandardListItem
-            key={movie.imdbID}
+            accessibleName={movie.Title}
             data-id={movie.imdbID}
+            description={`${movie.Type} - ${movie.Year}`}
+            image={movie.Poster}
+            key={movie.imdbID}
             type={ListItemType.Navigation}
           >
             {movie.Title}

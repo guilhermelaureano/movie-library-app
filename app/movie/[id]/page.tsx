@@ -7,7 +7,7 @@ interface MovieDetailsProps {
 }
 
 export default async function MovieDetails({ id }: MovieDetailsProps) {
-  const response = await fetch(`http:localhost:3002/movie/?id=tt0114709`, {
+  const response = await fetch(`http:localhost:3002/movie/?id=${id}`, {
     next: { revalidate: 10 },
   });
   const movie = await response.json();
